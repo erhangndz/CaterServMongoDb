@@ -9,6 +9,7 @@ namespace CaterServMongoDb.Mapping
         public CategoryMapping()
         {
             CreateMap<ResultCategoryDto, Category>().ReverseMap();
+            CreateMap<ResultCategoryDto, UpdateCategoryDto>().ReverseMap();
             CreateMap<CreateCategoryDto, Category>().ReverseMap();
             CreateMap<UpdateCategoryDto, Category>().ReverseMap();
 

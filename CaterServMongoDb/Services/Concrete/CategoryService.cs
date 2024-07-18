@@ -38,10 +38,10 @@ namespace CaterServMongoDb.Services.Concrete
             return _mapper.Map<List<ResultCategoryDto>>(values);
         }
 
-        public async Task<UpdateCategoryDto> GetCategoryById(string id)
+        public async Task<ResultCategoryDto> GetCategoryById(string id)
         {
            var value =await _categoryCollection.Find(x=>x.CategoryId==id).FirstOrDefaultAsync();
-            return _mapper.Map<UpdateCategoryDto>(value);
+            return _mapper.Map<ResultCategoryDto>(value);
         }
 
         public async Task UpdateCategory(UpdateCategoryDto categoryDto)

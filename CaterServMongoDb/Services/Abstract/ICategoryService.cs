@@ -6,7 +6,7 @@ namespace CaterServMongoDb.Services.Abstract
     {
         Task<List<ResultCategoryDto>> GetAllCategories();
 
-        Task<UpdateCategoryDto> GetCategoryById(string id);
+        Task<ResultCategoryDto> GetCategoryById(string id);
 
         Task UpdateCategory(UpdateCategoryDto categoryDto);
 
